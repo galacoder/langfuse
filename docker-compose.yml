@@ -5,7 +5,7 @@ services:
       db:
         condition: service_healthy
     ports:
-      - "3000:3000"
+      - "3000:3023"
     environment:
       - DATABASE_URL=postgresql://postgres:postgres@db:5432/postgres
       - NEXTAUTH_SECRET=mysecret
@@ -27,7 +27,7 @@ services:
       - POSTGRES_PASSWORD=postgres
       - POSTGRES_DB=postgres
     ports:
-      - 5432:5432
+      - 5432:5429
     volumes:
       - database_data:/var/lib/postgresql/data
 
