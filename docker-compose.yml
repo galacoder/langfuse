@@ -5,7 +5,7 @@ services:
       db:
         condition: service_healthy
     ports:
-      - "3000:3023"
+      - "3023:3023"
     environment:
       - DATABASE_URL=postgresql://postgres:postgres@db:5432/postgres
       - NEXTAUTH_SECRET=mysecret
